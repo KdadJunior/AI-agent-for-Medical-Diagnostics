@@ -11,7 +11,8 @@ import json, os
 load_dotenv(dotenv_path='apikey.env')
 
 # read the medical report
-with open("Medical Reports\Medical Rerort - Michael Johnson - Panic Attack Disorder.txt", "r") as file:
+medical_report_path = os.path.join("Medical Reports", "Medical Report - Michael Johnson - Panic Attack Disorder.txt")
+with open(medical_report_path, "r") as file:
     medical_report = file.read()
 
 
@@ -44,7 +45,7 @@ team_agent = MultidisciplinaryTeam(
 # Run the MultidisciplinaryTeam agent to generate the final diagnosis
 final_diagnosis = team_agent.run()
 final_diagnosis_text = "### Final Diagnosis:\n\n" + final_diagnosis
-txt_output_path = "results/final_diagnosis.txt"
+txt_output_path = os.path.join("Results", "final_diagnosis.txt")
 
 # Ensure the directory exists
 os.makedirs(os.path.dirname(txt_output_path), exist_ok=True)

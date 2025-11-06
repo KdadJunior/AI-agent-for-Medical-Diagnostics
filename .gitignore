@@ -9,6 +9,8 @@ __pycache__/
 # Environment files
 .env
 .env.*
+*.env
+apikey.env
 
 # Distribution / packaging
 .Python
@@ -95,6 +97,8 @@ Thumbs.db
 # Environment variables
 .env
 .env.*
+*.env
+apikey.env
 
 # Model weights / checkpoints (large files)
 *.ckpt
@@ -113,5 +117,6 @@ datasets/
 
 # Results
 results/
+Results/
 outputs/
 logs/
